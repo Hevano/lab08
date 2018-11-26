@@ -1,8 +1,53 @@
-/*
-Requirements:
-- Responsive, support 3 resolutions
-- Use float and clear
-- Use 1 css filter
-- Use 1 transformation
-- Use three animations
-*/
+#pictureContainer {
+  width: 80%;
+  margin:auto;
+  margin-top: 2em;
+}
+
+.crossfade > img {
+    overflow: hidden;
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    color: transparent;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 10s linear infinite 0s;
+}
+
+#animation {
+  transform: translate(20%, 20%);
+}
+ .crossfade > img:nth-child(2) {
+   animation-delay: 2s;
+ }
+
+ .crossfade > img:nth-child(3) {
+   animation-delay: 4s;
+ }
+
+
+ .crossfade > img:nth-child(4) {
+   animation-delay: 6s;
+ }
+
+ .crossfade > img:nth-child(5) {
+   animation-delay: 8s;
+ }
+
+ #crossfade > img:nth-child(5) {
+   animation-delay: 10s;
+}
+
+
+
+
+ @keyframes imageAnimation {
+     0% { opacity: 0;
+     animation-timing-function: ease-in; }
+     0% { opacity: 1;
+          animation-timing-function: ease-out; }
+
+     100% { opacity: 0 }
+ }
