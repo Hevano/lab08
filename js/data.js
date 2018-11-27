@@ -75,7 +75,7 @@ module.exports = {
     }
   },
 
-  getHTML: function (fruit) {
+  getJSON: function (fruit) {
     switch (fruit) {
       case 0:
         return avocadoJS;
