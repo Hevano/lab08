@@ -39,6 +39,78 @@ let watermelonHTML = "<ul><li>Watermelon</li><li>Is it a fruit? Is it a melon? N
 let watermelonJS = ["Watermelon", "Is it a fruit? Is it a melon? Nobody knows."];
 
 module.exports = {
+
+  getHTML: function (fruit) {
+    switch (fruit) {
+      case 0:
+        return avocadoHTML;
+        break;
+      case 1:
+        return bananaHTML;
+        break;
+      case 2:
+        return blueberryHTML;
+        break;
+      case 3:
+        return cherryHTML;
+        break;
+      case 4:
+        return mangoHTML;
+        break;
+      case 5:
+        return orangeHTML;
+        break;
+      case 6:
+        return pineappleHTML;
+        break;
+      case 7:
+        return pomegraniteHTML;
+        break;
+      case 8:
+        return raspberryHTML;
+        break;
+      case 9:
+        return watermelonHTML;
+        break;
+    }
+  },
+
+  getHTML: function (fruit) {
+    switch (fruit) {
+      case 0:
+        return avocadoJS;
+        break;
+      case 1:
+        return bananaJS;
+        break;
+      case 2:
+        return blueberryJS;
+        break;
+      case 3:
+        return cherryJS;
+        break;
+      case 4:
+        return mangoJS;
+        break;
+      case 5:
+        return orangeJS;
+        break;
+      case 6:
+        return pineappleJS;
+        break;
+      case 7:
+        return pomegraniteJS;
+        break;
+      case 8:
+        return raspberryJS;
+        break;
+      case 9:
+        return watermelonJS;
+        break;
+    }
+  },
+
+  /*
   getavocadoHTML: function () {
       console.log("called: getavocadoHTML");
       // Note: this could be from a DB, for now it's just hard-coded
@@ -136,5 +208,5 @@ module.exports = {
       console.log("called: getwatermelonJSON");
       // Note: this could be from a DB, for now it's just hard-coded
       return watermelonJS;
-  }
+  } */
 };
