@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log("script ready to go!")
 
     // Gets a list of fruit facts from the server
-    $('#facts').click(function(e) {
+    $('#b0').click(function(e) {
         console.log(e, "This is e");
         $.ajax({
             url: "/ajax-GET-fruitfacts",
