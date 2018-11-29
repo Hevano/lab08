@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // Gets a list of fruit facts from the server
     $('#b0').click(function(e) {
-        console.log(e, "This is e");
+        console.log($(e["currentTarget"]).attr("id"), "This is id");
         $.ajax({
             url: "/ajax-GET-fruitfacts",
             dataType: "html",
@@ -23,16 +23,14 @@ $(document).ready(function() {
     });
 
 
-    /* GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA
-    $('#mainMenu #getJSONList').click(function(e) {
-        console.log(e, "This is e")
+    /* GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA */
+    $('#b1').click(function(e) {
 
         $.ajax({
-            url: "/ajax-GET-list",
+            url: "/ajax-GET-fruitfacts",
             dataType: "json",
             type: "GET",
-            fruit: 0,
-            data: { format: "json-list"},
+            data: { format: "json-list", fruit: 1},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
                 var div = $("#facts");
@@ -49,7 +47,7 @@ $(document).ready(function() {
                 console.log("ERROR:", jqXHR, textStatus, errorThrown);
             }
         });
-    }); */
+    });
 
 
     // PERFORM A HTTP POST, AND GET A RESPONSE FROM THE SERVER
