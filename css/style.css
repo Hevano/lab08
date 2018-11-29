@@ -38,20 +38,82 @@ body {
 }
 
 .crossfade > img {
-    overflow: auto;
+    overflow: hidden;
     position: absolute;
     left: 40%;
     width: 40%;
     color: transparent;
+    opacity: 0;
     z-index: 0;
     margin-top: 6em;
     border-style: groove;
 border-color:pink;
 border-width: 25px;
+ animation: imageAnimation 20s linear infinite 0s;
 }
 
+.crossfade > img:nth-child(2)  {
+    animation-delay: 2s;
+}
+.crossfade > img:nth-child(3) {
+    animation-delay: 4s;
+}
+.crossfade > img:nth-child(4) {
+    animation-delay: 6s;
+}
+.crossfade > img:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.crossfade > img:nth-child(6) {
+    animation-delay: 10s;
+}
+.crossfade > img:nth-child(7) {
+    animation-delay: 12s;
+}
+.crossfade > img:nth-child(8) {
+    animation-delay: 14s;
+}
+.crossfade > img:nth-child(9) {
+    animation-delay: 16s;
+}
+.crossfade > img:nth-child(10) {
+    animation-delay: 18s;
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+.stylez {
+    background-color: white;
+    font-family: Montserrat;
+    width: 50px;
+    position: absolute;
+    text-align: center;
+    border-style: groove;
+    border-color:pink;
+    border-width: 15px;
+}
+
+ #getHTML {
+   margin-left: 27%;
+   margin-top: 10%;
+ }
+
+ #getJSON {
+   margin-left: 87%;
+   margin-top: 10%;
+ }
+
 .fruit {
-  display: none
 }
 
 .meme {
@@ -111,7 +173,16 @@ border-width: 25px;
 
   }
 
+  #getHTML {
+  margin-top: 60%;
+  margin-left: 40%;
+  }
 
+
+  #getJSON {
+  margin-top: 60%;
+  margin-left: 80%;
+  }
 
 }
 
@@ -120,6 +191,15 @@ border-width: 25px;
     margin-top: -9em;
     height: 150px;
 
+  }
+
+  #getHTML {
+    margin-top: 70%;
+    margin-left: 0;
+  }
+
+  #getJSON {
+    margin-top: 70%;
   }
 
     #facts {
