@@ -1,21 +1,21 @@
 $(document).ready(function() {
+    console.log("script ready to go!")
 
     // Gets a list of fruit facts from the server
-    $('img.fruit').click(function(e) {
-
+    $('#facts').click(function(e) {
+        console.log(e, "This is e");
         $.ajax({
-            url: "/ajax-GET-list",
+            url: "/ajax-GET-fruitfacts",
             dataType: "html",
             type: "GET",
-            fruit: 0 + e.attr("id");
-            data: { format: "html-list"},
+            data: { format: "html-list", fruit: 0},
             success: function(data) {
                 console.log("SUCCESS HTML:", data);
                 $("#facts").html(data);
 
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                $("#facts").html(jqXHR.statusText);
+                $("#facts").html("<p>Woop</p>");
                 console.log("ERROR:", jqXHR, textStatus, errorThrown);
             }
 
@@ -23,14 +23,15 @@ $(document).ready(function() {
     });
 
 
-    // GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA
+    /* GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA
     $('#mainMenu #getJSONList').click(function(e) {
+        console.log(e, "This is e")
 
         $.ajax({
             url: "/ajax-GET-list",
             dataType: "json",
             type: "GET",
-            fruit: 0 + e.attr("id");
+            fruit: 0,
             data: { format: "json-list"},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
@@ -48,7 +49,7 @@ $(document).ready(function() {
                 console.log("ERROR:", jqXHR, textStatus, errorThrown);
             }
         });
-    });
+    }); */
 
 
     // PERFORM A HTTP POST, AND GET A RESPONSE FROM THE SERVER

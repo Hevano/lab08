@@ -29,15 +29,19 @@ app.use('/img', express.static('../img'));
 app.get('/ajax-GET-fruitfacts', function (req, res) {
 
     //res.setHeader('Content-Type', 'application/json');
-    //console.log(req.query['format']);
+    console.log(lists, "lists");
+    
     let formatOfResponse = req.query['format'];
     let fruit = req.query['fruit']; //The ajax request should include a fruit property that contains a number 0-9
+    console.log(formatOfResponse, "format");
+    console.log(fruit, "fruit");
     let dataList = null;
 
     if(formatOfResponse == 'html-list') {
 
         res.setHeader('Content-Type', 'text/html');
         dataList = lists.getHTML(fruit);
+        console.log(dataList);
         res.send(dataList);
 
     } else if(formatOfResponse == 'json-list') {
