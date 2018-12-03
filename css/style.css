@@ -66,7 +66,7 @@ border-width: 25px;
 }
 
 #facts {
-  height: 50px;
+  height: 60%;
   width: 60%;
   background-color: white;
   margin-left: 30%;
@@ -79,6 +79,12 @@ border-width: 25px;
   font-family: Montserrat;
   font-size: 23pt;
   text-align: center;
+}
+
+#facts ul, #facts ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .answer {
