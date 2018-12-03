@@ -41,11 +41,8 @@ let watermelonJS = ["Watermelon", "Is it a fruit? Is it a melon? Nobody knows."]
 module.exports = {
 
   getHTML: function (fruit) {
-    console.log(fruit, "fruit!");
-    switch (fruit) {
+    switch (parseInt(fruit)) {
       case 0:
-        console.log(avocadoHTML, "HERE WE GOOOOO");
-        console.log("HERE WE GOOOOO");
         return avocadoHTML;
         break;
       case 1:
@@ -82,7 +79,7 @@ module.exports = {
   },
 
   getJSON: function (fruit) {
-    switch (fruit) {
+    switch (parseInt(fruit)) {
       case 0:
         return avocadoJS;
         break;
