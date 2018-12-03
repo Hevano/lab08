@@ -30,7 +30,7 @@ app.get('/ajax-GET-fruitfacts', function (req, res) {
 
     //res.setHeader('Content-Type', 'application/json');
     console.log(lists, "lists");
-    
+
     let formatOfResponse = req.query['format'];
     let fruit = req.query['fruit']; //The ajax request should include a fruit property that contains a number 0-9
     console.log(formatOfResponse, "format");
