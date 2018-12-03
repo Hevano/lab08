@@ -8,7 +8,7 @@ $(document).ready(function() {
             url: "/ajax-GET-fruitfacts",
             dataType: "html",
             type: "GET",
-            data: { format: "html-list", fruit: 0},
+            data: { format: "html-list", fruit: $(e["currentTarget"]).attr("id")},
             success: function(data) {
                 console.log("SUCCESS HTML:", data);
                 $("#facts").html(data);
@@ -24,13 +24,13 @@ $(document).ready(function() {
 
 
     /* GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA */
-    $('#b1').click(function(e) {
+    $('div.meme').click(function(e) {
 
         $.ajax({
             url: "/ajax-GET-fruitfacts",
             dataType: "json",
             type: "GET",
-            data: { format: "json-list", fruit: 1},
+            data: { format: "json-list", fruit: $(e["currentTarget"]).attr("id")},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
                 var div = $("#facts");
