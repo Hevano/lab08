@@ -103,6 +103,10 @@ border-width: 25px;
     border-width: 15px;
 }
 
+p:hover {
+  border: red 2px solid;
+}
+
  #getHTML {
    margin-left: 27%;
    margin-top: 10%;
