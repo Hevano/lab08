@@ -8,13 +8,16 @@ body {
 }
 
 #background {
- background-image: url("../img/banner.png");
- height: 150px;
- background-position: center;
- background-size: cover;
- background-repeat: no-repeat;
- filter: blur(5px);
- margin-top: -5.5em;
+  background-image: url("../img/banner.png");
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  margin-top: -5.5em;
+  border-style: groove;
+  border-color: #AA3939;
+  border-width: 5px;
 }
 
 #navig {
@@ -45,11 +48,11 @@ body {
     color: transparent;
     opacity: 0;
     z-index: 0;
-    margin-top: 6em;
+    margin-top: 8em;
     border-style: groove;
-border-color:pink;
-border-width: 25px;
- animation: imageAnimation 20s linear infinite 0s;
+    border-color:#AA3939;
+    border-width: 25px;
+    animation: imageAnimation 20s linear infinite 0s;
 }
 
 .crossfade > img:nth-child(2)  {
@@ -99,18 +102,20 @@ border-width: 25px;
     position: absolute;
     text-align: center;
     border-style: groove;
-    border-color:pink;
+    border-color:#AA3939;
     border-width: 15px;
+    cursor: pointer;
 }
 
  #getHTML {
    margin-left: 27%;
-   margin-top: 10%;
+   margin-top: 18%;
  }
 
  #getJSON {
+   background-color: #939393;
    margin-left: 87%;
-   margin-top: 10%;
+   margin-top: 18%;
  }
 
 .fruit {
@@ -122,19 +127,19 @@ border-width: 25px;
   background-color: white;
   bottom: 50px;
   border-style: groove;
-  border-color:pink;
+  border-color:#AA3939;
   border-width: 5px;
   text-align: center;
 }
 
 #facts {
-  height: 60%;
+  height: 100px;
   width: 60%;
   background-color: white;
   margin-left: 30%;
   margin-top: 1%;
   border-style: groove;
-  border-color:pink;
+  border-color: #AA3939;
   border-width: 5px;
   text-align: center;
   position:absolute;
@@ -147,6 +152,7 @@ border-width: 25px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-size: 18pt;
 }
 
 .answer {
@@ -190,6 +196,8 @@ border-width: 25px;
   margin-left: 80%;
   }
 
+
+
 }
 
 @media screen and (max-width: 489px) {
@@ -219,7 +227,7 @@ border-width: 25px;
   }
 
   #container2 {
-    margin-top: 90%;
+    margin-top: 110%;
     margin-left: 15%;
   }
 

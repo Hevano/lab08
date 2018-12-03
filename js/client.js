@@ -1,7 +1,22 @@
 $(document).ready(function() {
-    console.log("script ready to go!")
+    console.log("script ready to go!");
+    var json = false;
 
-    // Gets a list of fruit facts from the server
+    $('#getHTML').click(function(e) {
+        json = false;
+        $('#getJSON').css("backgroundColor","#939393");
+        $('#getHTML').css("backgroundColor","white");
+        console.log("Flicked!", json);
+    });
+
+    $('#getJSON').click(function(e) {
+        json = true;
+        $('#getHTML').css("backgroundColor","#939393");
+        $('#getJSON').css("backgroundColor","white");
+        console.log("Flicked!", json);
+    });
+
+    /* Gets a list of fruit facts from the server
     $('#b0').click(function(e) {
         console.log($(e["currentTarget"]).attr("id"), "This is id");
         $.ajax({
@@ -20,27 +35,37 @@ $(document).ready(function() {
             }
 
         });
-    });
+    }); */
 
 
     /* GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA */
     $('div.meme').click(function(e) {
+        let type = ["html","html-list"];
+        if(json) {
+            type = ["json","json-list"];
+        }
+        console.log("AJAX", type, json);
 
         $.ajax({
             url: "/ajax-GET-fruitfacts",
-            dataType: "json",
+            dataType: type[0],
             type: "GET",
-            data: { format: "json-list", fruit: $(e["currentTarget"]).attr("id")},
+            data: { format: type[1], fruit: $(e["currentTarget"]).attr("id")},
             success: function(data) {
-                console.log("SUCCESS JSON:", data);
-                var div = $("#facts");
-                let htmlStr = "<ol>";
-                for(let i = 0; i < data.length; i++) {
-                    htmlStr += "<li>" + data[i] + "</li>";
+                if(json) {
+                    console.log("SUCCESS JSON:", data);
+                    var div = $("#facts");
+                    let htmlStr = "<ul>";
+                    for(let i = 0; i < data.length; i++) {
+                        htmlStr += "<li>" + data[i] + "</li>";
+                    }
+                    htmlStr += "</ul>";
+                    div.html(htmlStr);
                 }
-                htmlStr += "</ol>";
-                div.html(htmlStr);
-
+                else {
+                    console.log("SUCCESS HTML:", data);
+                    $("#facts").html(data);
+                }
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 $("#p1").text(jqXHR.statusText);
@@ -50,7 +75,7 @@ $(document).ready(function() {
     });
 
 
-    // PERFORM A HTTP POST, AND GET A RESPONSE FROM THE SERVER
+    /* PERFORM A HTTP POST, AND GET A RESPONSE FROM THE SERVER
     $('#submit').click(function(e) {
         let formData = { firstName: $("#firstName").val(),
                          lastName: $("#lastName").val(),
@@ -76,6 +101,6 @@ $(document).ready(function() {
                 console.log("ERROR:", jqXHR, textStatus, errorThrown);
             }
         });
-    });
+    }); */
 
 });
