@@ -101,9 +101,6 @@ body {
     width: 50px;
     position: absolute;
     text-align: center;
-    border-style: groove;
-    border-color:#AA3939;
-    border-width: 15px;
     cursor: pointer;
 }
 
@@ -139,7 +136,7 @@ body {
   margin-left: 30%;
   margin-top: 1%;
   border-style: groove;
-  border-color: #AA3939;
+  border-color: #E4C5AF;
   border-width: 5px;
   text-align: center;
   position:absolute;

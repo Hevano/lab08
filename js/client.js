@@ -5,14 +5,14 @@ $(document).ready(function() {
     $('#getHTML').click(function(e) {
         json = false;
         $('#getJSON').css("backgroundColor","#939393");
-        $('#getHTML').css("backgroundColor","white");
+        $('#getHTML').css("backgroundColor","#077187");
         console.log("Flicked!", json);
     });
 
     $('#getJSON').click(function(e) {
         json = true;
         $('#getHTML').css("backgroundColor","#939393");
-        $('#getJSON').css("backgroundColor","white");
+        $('#getJSON').css("backgroundColor","#077187");
         console.log("Flicked!", json);
     });
 
