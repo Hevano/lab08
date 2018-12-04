@@ -35,6 +35,7 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
  position: relative;
  z-index: 10;
+ animation: colorAnim 5s infinite; 
 }
 
 #navig img {
@@ -99,14 +100,24 @@ body {
     100% { opacity: 0 }
 }
 
+@keyframes colorAnim {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: red;}
+}
+
+
 
 .stylez {
-    background-color: white;
     font-family: Nunito;
     width: 50px;
     position: absolute;
     text-align: center;
     cursor: pointer;
+    border: 5px solid transparent;
+    border-radius: 2em;
+    padding: 0.2em;
 }
 
 .meme p:hover {
@@ -114,6 +125,7 @@ body {
 }
 
  #getHTML {
+   background-color: #077187;
    margin-left: 27%;
    margin-top: 18%;
  }
@@ -207,6 +219,11 @@ body {
   #getJSON {
   margin-top: 60%;
   margin-left: 80%;
+  }
+
+  #navig {
+    margin-top: -0em;
+    font-size: 40pt;
   }
 
 
