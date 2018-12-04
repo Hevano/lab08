@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 #pictureContainer {
   margin:auto;
 }
@@ -14,16 +17,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   filter: blur(5px);
-  margin-top: -5.5em;
+  margin-top: -6.7em;
   border-style: groove;
   border-color: #AA3939;
   border-width: 5px;
+  border-bottom: solid 20px white;
 }
 
 #navig {
-  font-family: Montserrat;
+  font-family: Black Han Sans;
+  letter-spacing: 2pt;
   text-align: center;
-  font-size: 40pt;
+  font-size: 50pt;
   padding-top: 20pt;
   font-weight: bold;
   color: white;
@@ -97,11 +102,15 @@ body {
 
 .stylez {
     background-color: white;
-    font-family: Montserrat;
+    font-family: Nunito;
     width: 50px;
     position: absolute;
     text-align: center;
     cursor: pointer;
+}
+
+.meme p:hover {
+  background-color: green;
 }
 
  #getHTML {
@@ -127,6 +136,10 @@ body {
   border-color:#AA3939;
   border-width: 5px;
   text-align: center;
+  font-size: 15pt;
+  letter-spacing: 1pt;
+  font-family: Nunito;
+  line-height: 45px;
 }
 
 #facts {
@@ -145,6 +158,10 @@ body {
   text-align: center;
 }
 
+#container2 {
+  margin-top: 1%;
+}
+
 #facts ul, #facts ol {
   list-style-type: none;
   margin: 0;
@@ -153,10 +170,9 @@ body {
 }
 
 .answer {
-  text-align: center;
-  font-size: 11pt;
-  font-family: Montserrat;
-}
+  padding: 0;
+  margin: 0;
+  }
 
 #animation {
   transform: translate(200%, 0);
@@ -221,6 +237,7 @@ body {
     float: left;
     width: 40%;
     height: 40px;
+    line-height: 40px;
   }
 
   #container2 {
